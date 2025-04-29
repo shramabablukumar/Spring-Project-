@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- Enable @Transactional annotation -->
+    <tx:annotation-driven/>
+
+    <!-- DataSource Bean -->
+    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="S1">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/EmployeeORM" />
+        <property name="username" value="root" />
+        <property name="password" value="tanu@2021" />
+    </bean>
+
+    <!-- SessionFactory Bean -->
+    <bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" name="localfactory">
+        <property name="dataSource" ref="S1" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+        <property name="annotatedClasses">
+            <list>
+                <value>g.h.k.Employee</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- HibernateTemplate Bean -->
+    <bean class="org.springframework.orm.hibernate5.HibernateTemplate" name="hibernatetemplate">
+        <property name="sessionFactory" ref="localfactory" />
+    </bean>
+
+    <!-- TransactionManager Bean -->
+    <bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transactionManager">
+        <property name="sessionFactory" ref="localfactory" />
+    </bean>
+
+    <!-- DAO Bean -->
+    <bean class="g.h.k.EmployeDao" name="edao">
+        <property name="hibrtempl" ref="hibernatetemplate" />
+    </bean>
+
+</beans>

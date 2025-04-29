@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean class="com.springpro.Adress" name="a1">
+ <property name="City" value="Bangalore"></property>
+ <property name="State" value="Bihar"></property>
+ <property name="Country" value="India"></property>
+ </bean>
+ 
+ <bean class="com.springpro.Student" name="S3">
+ <property name="Sid" value="100"/>
+ <property name="Name" value="Bablu"/>
+ <property name="a">
+ <ref bean="a1"/>
+ 
+ </property>
+ </bean>
+ 
+ 
+ 
+</beans>
+ 

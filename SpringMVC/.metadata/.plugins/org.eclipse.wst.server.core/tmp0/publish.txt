@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Tue Apr 29 09:29:49 IST 2025
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\sharm\\.m2\\repository\\org\\springframework\\spring-web\\5.2.4.RELEASE\\spring-web-5.2.4.RELEASE.jar=C\:\\Users\\sharm\\Desktop\\Advance java JDBC\\Form\\apache-tomcat-9.0.104\\wtpwebapps\\SpringMvcProj-2\\WEB-INF\\lib\\spring-web-5.2.4.RELEASE.jar
+org.eclipse.jst.j2ee.server\:SpringMvcProj-2=C\:\\Users\\sharm\\Desktop\\Advance java JDBC\\Form\\apache-tomcat-9.0.104\\wtpwebapps\\SpringMvcProj-2
+org.eclipse.jst.j2ee.server\:SpringMvcProj1=C\:\\Users\\sharm\\Desktop\\Advance java JDBC\\Form\\apache-tomcat-9.0.104\\wtpwebapps\\SpringMvcProj1

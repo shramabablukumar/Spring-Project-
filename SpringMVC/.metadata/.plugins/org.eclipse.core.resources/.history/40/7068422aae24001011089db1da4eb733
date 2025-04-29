@@ -1,0 +1,15 @@
+package m.v.t;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Employee {
+    
+    @RequestMapping("hellomyurl")
+    public String Hello(Model m) {
+        m.addAttribute("name", "cbcwebWorld"); // Adding "name" attribute to the model
+        return "index"; // Returning view name (index.jsp or index.html based on your config)
+    }
+}

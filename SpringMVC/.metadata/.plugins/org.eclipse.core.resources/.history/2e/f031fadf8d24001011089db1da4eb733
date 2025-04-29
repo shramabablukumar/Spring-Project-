@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans 
+xmlns="http://www.springframework.or
+ g/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/X
+ MLSchema-instance"  
+xmlns:context="http://www.springframe
+ work.org/schema/context" 
+xmlns:p="http://www.springframework.
+ org/schema/p" 
+xsi:schemaLocation="http://www.springf
+ ramework.org/schema/beans 
+http://www.springframework.org/schem
+ a/beans/spring-beans.xsd 
+http://www.springframework.org/schem
+ a/context 
+http://www.springframework.org/schem
+ a/context/spring-context.xsd"> 
+
+<bean 
+class="org.springframework.web.servlet.
+ view.InternalResourceViewResolver" 
+name="viewResolver"> 
+<property name="prefix" 
+value="/WEB-INF/" /> 
+<property name="suffix" value=".jsp" 
+/> 
+</bean> 
+</beans>

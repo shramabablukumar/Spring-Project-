@@ -1,0 +1,13 @@
+package m.v.t;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Employee {
+	@RequestMapping("hellomyurl")
+	public String Hello() {
+		return "index";
+	}
+
+}

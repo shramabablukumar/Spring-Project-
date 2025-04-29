@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean class="com.springpro.Student" name="S2">
+ <property name="sid" value="12"/>
+ <property name="sname" value="Rohan"/>
+ <property name="skills">
+ <list>
+ <value>Java</value>
+  <value>python</value>
+   <value>pHP</value>
+ </list>
+ </property>
+ <property name="course">
+ <map>
+ <entry key="short-term" value="1month"></entry>
+ <entry key="mid-term" value="2month"></entry>
+ <entry key="long-term" value="5month"></entry>
+ </map>
+ </property>
+ 
+ 
+ 
+ 
+ </bean>
+ 
+ 
+ 
+</beans>
